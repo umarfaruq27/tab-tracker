@@ -30,5 +30,11 @@ app.get('/status', (req, res) => {
 /* req itu maksudnya request, sedangkan res itu response.
 Jadi saat http://localhost:8081/status dijalankan dia akan me-request dan kemudian
 akan diresponse dengan mengirimkan data res.send({}) dalam bentuk data JSON */
+app.post('/register', (req, res) => {
+    res.send({
+        message: `Hai ${req.body.email}, your user was registered`
+    })
+});
+
 
 app.listen(process.env.PORT || 8081);/* Ini untuk memberi tahu port mana yang akan digunakan saat app ini dijalankan */
